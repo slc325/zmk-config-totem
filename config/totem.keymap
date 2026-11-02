@@ -50,6 +50,13 @@
                 <&macro_tap>,
                 <&kp R &kp T &kp N2 &kp ENTER>;
         };
+
+        tip: tip {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(H) &kp A &kp O &kp LS(P) &kp H &kp E &kp I &kp AT &kp N1 &kp N2 &kp N4 &kp RET>;
+            label = "TIP";
+        };
     };
 
     behaviors {
@@ -89,19 +96,19 @@
 
         nav_num {
             bindings = <
-                &kp NUMBER_1  &kp NUMBER_2  &kp N3    &kp N4      &kp NUMBER_5    &kp N6     &kp N7         &kp N8        &kp N9                &kp N0
-                &kp EXCL      &kp AT        &kp HASH  &kp DOLLAR  &kp PRCNT       &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1  &trans    &kp LGUI    &td_seq         &trans     &trans         &trans        &trans                &trans                 &kp TILDE
-                                            &trans    &trans      &trans          &trans     &trans         &trans
+        &kp NUMBER_1  &kp NUMBER_2  &kp N3      &kp N4      &kp NUMBER_5    &kp N6     &kp N7         &kp N8        &kp N9                &kp N0
+        &kp EXCL      &kp AT        &kp HASH    &kp DOLLAR  &kp PRCNT       &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp F1  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_CLR  &kp LGUI    &td_seq         &trans     &trans         &trans        &trans                &trans                 &kp TILDE
+                                    &trans      &trans      &trans          &trans     &trans         &trans
             >;
         };
 
         sym_func {
             bindings = <
-           &kp COLON  &kp UNDERSCORE    &kp SLASH         &kp NON_US_BACKSLASH  &kp QUESTION       &trans            &trans             &trans             &trans            &trans
-           &kp MINUS  &kp GREATER_THAN  &kp PIPE          &kp PLUS              &kp EQUAL          &kp LEFT_ARROW    &kp DOWN_ARROW     &kp UP_ARROW       &kp RIGHT_ARROW   &kp SEMICOLON
-&kp COLON  &trans     &kp LESS_THAN     &kp GREATER_THAN  &kp LEFT_BRACE        &kp RIGHT_BRACE    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &trans         &kp F1
-                                        &trans            &trans                &trans             &none             &trans             &none
+        &kp COLON  &kp UNDERSCORE    &kp SLASH         &kp NON_US_BACKSLASH  &kp QUESTION       &trans            &trans             &trans             &trans            &trans
+        &kp MINUS  &kp GREATER_THAN  &kp PIPE          &kp PLUS              &kp EQUAL          &kp LEFT_ARROW    &kp DOWN_ARROW     &kp UP_ARROW       &kp RIGHT_ARROW   &kp SEMICOLON
+&trans  &trans     &kp LESS_THAN     &kp GREATER_THAN  &kp LEFT_BRACE        &kp RIGHT_BRACE    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &trans         &trans
+                                     &trans            &trans                &trans             &none             &trans             &none
             >;
         };
 
