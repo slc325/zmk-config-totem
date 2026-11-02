@@ -90,11 +90,11 @@
             bindings = <&tip>, <&ctrl_alt_del>;
         };
 
-        // Tri-State Window Switcher (Callum style Alt-Tab)
+        // Tri-State Window Switcher (Callum style Alt-Tab with 3 required bindings)
         swapper: swapper {
             compatible = "zmk,behavior-tri-state";
             #binding-cells = <0>;
-            bindings = <&kp LA(TAB)>, <&kp TAB>;
+            bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
         };
 
         // Home Row Mods Behavior with Balanced Flavor and Prior-Idle Protection
